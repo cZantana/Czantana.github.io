@@ -1,0 +1,247 @@
+@font-face {
+    font-family: Product Sans;
+    src: url("Portfolio files/Product sans Font/product Sans Regular.ttf");
+}
+
+@font-face {
+    font-family: Product Sans talic;
+    src: url("Portfolio files/Product sans Font/product Sans Italic.ttf");
+}
+@font-face {
+    font-family: Florida Vibes;
+    src: url("Portfolio files/Product sans Font/Product\ Sans\ Regular.ttf");
+}
+
+:root {
+--clarblu: #0099ff;
+--navcolor: #0099ff;
+--origiblu: #0060B8;
+--oscublu: #002242;
+--titlefontsize: 65px;
+
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    /* background: url("Portfolio files/Render Harley fat bob V2.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+     */
+    background-color: #242424;
+}
+header{
+    font-family: "Product Sans";
+    position: relative;
+    top: 0;
+    left: 15%;
+    width: 70%;
+    padding: 5px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+    background-color: rgba(70,70,70,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    transform-style: 0.3s;
+    transition: 0.3s;
+}
+
+.logo{
+    width: 95px;
+}
+
+.logo img{
+    width: 100%;
+}
+
+.navbar a{
+    font-size: 18px;
+    position: relative;
+    color: white;
+    font-weight: 500px;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: 0.3s;
+}
+
+.navbar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: var(--navcolor);
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.navbar a:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.navbar a:hover{
+    color: var(--navcolor);
+    transition: .7s;
+    text-shadow: 0 0 10px,
+                0 0 30px,
+                0 0 50px;
+}
+
+/*BREAK POINTS*/
+@media (max-width: 900px){
+    .header{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        padding: 10px 10%;
+    }
+    .logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+        padding-left: 20px;
+    }
+    .logo img{
+        width: 80px;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        transition: 0.3s;
+    
+    }
+    .navbar a{
+        margin-left: 0;
+        transition: 0.3s;
+    }
+    
+}
+
+@media (max-width: 600px){
+    .header{
+        left: 0;
+        width: 100%;
+    }
+
+}
+
+
+/* INICIO DE HOME */
+
+.home{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    padding-top: 10vh;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.home-content{
+    padding-top: 10vh;
+    display: block;
+    width: 50%;
+}
+.home h1.Hola{
+    font-size: 30px;
+    font-weight: lighter;
+    font-family: "Florida Vibes";
+    color: white;
+    transition: 0.3s;
+    margin-left: 10%;
+    padding-left: 10px;
+}
+.home h1.Nombre{
+    font-size: 55px;
+    font-weight: lighter;
+    font-family: "Florida Vibes";
+    color: white;
+    transition: 0.3s;
+    text-wrap: nowrap;
+}
+.div-Ingeniero{
+    display: flex;
+    flex-wrap: nowrap;
+    text-wrap: nowrap;
+    margin-left: 10%;
+    transition:  0.3s;
+}
+.div-Ingeniero h1{
+    margin-left: 10px;
+    font-size: var(--titlefontsize);
+    font-family: "Product Sans Talic";
+    color: var(--clarblu);
+    text-shadow: 0 0 5px,
+                0 0 30px,
+                0 0 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.div-Ingeniero h1::before{
+    content: attr(rfl_text);
+    position: absolute;
+    opacity: 20%;
+    text-shadow: 0 0 10px transparent,
+    0 0 30px transparent,
+    0 0 50px transparent;
+    transform: scaleY(-1) translateY(-50px);
+    mask-image: linear-gradient( transparent 25% , white 60%, transparent 100%);
+}
+
+@media (max-width: 1400px){
+    .div-Ingeniero{
+        margin-left: 0px;
+        justify-content: left;
+        text-align: left;
+        flex-wrap: wrap;
+    }
+    .home h1.Hola{
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 900px){
+    .home-content{
+        padding-top: 10vh;
+        display: block;
+        width: 100%;
+    }
+    .carrousel{
+        position: absolute;
+    }
+    .home h1.Hola{
+        display: flex;
+        justify-content: center;
+        margin-left: 0%;
+        padding-left: 0;
+    }
+    .home h1.Nombre{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        text-wrap: wrap;
+    }
+    .div-Ingeniero{
+        margin-left: 0px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-style: italic;
+        
+    }
+}
+
+
