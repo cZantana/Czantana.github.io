@@ -32,6 +32,7 @@
 body{
     display:block;
     min-height: 100vh;
+    height: 500vh;
     /* background: url("Portfolio files/Render Harley fat bob V2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
@@ -144,13 +145,14 @@ header{
 /* INICIO DE HOME */
 
 .home{
-    height: 80vh;
+    height: auto;
     width: 100%;
     display: flex;
     margin-top: 15vh;
     padding-top: 10vh;
     padding-left: 7%;
     padding-right: 10%;
+    padding-bottom: 50vh;
 }
 .home-content{
     padding-top: 15vh;
@@ -158,10 +160,11 @@ header{
     width: 50%;
     position: absolute;
 }
+
 .home h1.Hola{
     font-size: 30px;
     font-weight: lighter;
-    font-family: "Florida Vibes";
+    font-family: "Product Sans";
     color: white;
     transition: 0.3s;
     margin-left: 10%;
@@ -170,7 +173,7 @@ header{
 .home h1.Nombre{
     font-size: 55px;
     font-weight: lighter;
-    font-family: "Florida Vibes";
+    font-family: "Product Sans";
     color: white;
     transition: 0.3s;
     text-wrap: nowrap;
@@ -219,6 +222,7 @@ header{
         width: 50%;
     }
     .home{
+        padding-bottom: 50vh;
         padding-right: 5vw;
     }
 }
@@ -331,9 +335,6 @@ header{
     .flickity-slider{
         padding-inline: 0%;
     }
-    .home{
-        height: 700px;
-    }
 }
   
 @media (max-width: 1380px){
@@ -364,9 +365,11 @@ header{
     }
     .home{
         padding-inline: 0;
+        padding-bottom: 60vw;
     }
     .home-content{
-        padding-inline: 3%;
+        padding-right: 3%;
+        padding-left: 2%;
     }
     .gallery-cell img{
         opacity: 40%;
@@ -385,21 +388,136 @@ header{
 /* About-me Section */
 
 .about-me{
-    height: 90vh;
-    width: 100%;
+    height: fit-content;
 }
 
 .sobreMi{
-    padding-top: 10.5vh;
-    padding-left: 7%;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    height: fit-content;
+    width: 100%;
+    padding-inline: 5%;
 }
 
-.sobreMi h1{
-    font-size: 55px;
-    font-weight: lighter;
-    font-family: "Florida Vibes";
-    color: white;
-    transition: 0.3s;
+.contenidosobremi{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%);
+    transition: 1s;
     text-wrap: nowrap;
+    font-size: 50px;
+    font-weight: lighter;
+    font-family: "Product Sans";
+    color: white;
+    transition-delay: 0s;
+    padding-right: 5%;
+}
+
+.contenidosobremi:nth-child(1){
+    padding-top: 10%;
+    grid-column: 2;
+    align-self: end;
+}
+.contenidosobremi:nth-child(2){
+    grid-column: 2;
+    text-wrap: wrap;
+    text-align: justify;
+    font-size: 30px;
+    transition-delay: 0.3s;
+}
+.contenidosobremi:nth-child(3){
+    display: grid;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    padding-top: 20%;
+    place-items: center;
+    transition-delay: 0.6s;
+    padding-right: 0;
+}
+.contenidosobremi:nth-child(3) img{
+    width: 80%
+}
+
+.sobreMiS{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: 1s;
+}
+
+@media (max-width: 1380px){
+    .contenidosobremi:nth-child(1){
+        padding-left: 2%;
+    }
+    .contenidosobremi:nth-child(2){
+        font-size: 2.5vw;
+        padding-left: 2%;
+    }
+
+}
+
+@media (max-width: 900px){
+    .sobreMi{
+        display: block;
+        height: fit-content;
+        width: 100%;
+        padding-inline: 5%;
+    }
+    .contenidosobremi:nth-child(2){
+        padding-top: 5%;
+        font-size: 30px;
+        text-justify: justify;
+    }
+    .contenidosobremi:nth-child(3){
+        padding-top: 5%;
+        height: fit-content;
+    }
+    .contenidosobremi:nth-child(3) img{
+        width: 45vh;
+    }
+}
+
+@media (max-width: 600px){
+
+    .contenidosobremi:nth-child(2){
+        padding-top: 5%;
+        font-size: 25px;
+        text-justify: justify;
+    }
+    .contenidosobremi:nth-child(3) img{
+        width: 80%;
+    }
+}
+
+/* INICIO SECCION PROYECTOS */
+
+.proyectos
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.titleproyectos{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-10%);
+    padding-top: 10vh;
+    transition: 1s;
+    text-wrap: nowrap;
+    font-size: 50px;
+    font-weight: lighter;
+    font-family: "Product Sans";
+    color: white;
+    transition-delay: 0s;
+}
+
+.titleproyectosS
+{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+    transition: 1s;
 }
 
