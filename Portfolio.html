@@ -4,23 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Cristian Santana</title>
-    <script src="JSportfolio.js"></script>
     <link rel="stylesheet" type="text/css" href="CSSportfolio.css" />
+    <link rel="stylesheet" type="text/css" href="Portfolio files\Flickity js\flickity.css" />
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <a href="#" ><img src="Portfolio files\Firma recort.png" alt="Logo"></img></a>
+    <section class="home" id="Home">
+        <div class="carrousel" >
+            <div class="gallery js-flickity"   data-flickity='{ "draggable": false , 
+                                                            "adaptiveHeight": true, 
+                                                            "freeScroll": true, 
+                                                            "contain": true, 
+                                                            "prevNextButtons": false, 
+                                                            "pageDots": false, 
+                                                            "wrapAround": true, 
+                                                            "autoPlay": 3000,
+                                                            "pauseAutoPlayOnHover": false,
+                                                            "pauseAutoPlayClicked": false}'>
+                <div class="gallery-cell">
+                    <img src="Portfolio files\Carrousel imgs\Carro Renderizado sinfondo.png" alt="Mustang 1969" />
+                </div>
+                <div class="gallery-cell">
+                    <img src="Portfolio files\Carrousel imgs\Haralik descriptor billete 100 sinfondo.png" alt="Haralik descriptor billete 100" />
+                </div>
+                <div class="gallery-cell">
+                    <img src="Portfolio files\Carrousel imgs\Imagen portada Saac 3D sinfondo.jpg.png" alt="Aplicacion Saac 3d" />
+                </div>
+                <div class="gallery-cell">
+                    <img src="Portfolio files\Carrousel imgs\Render Harley fat bob V2 sinfondo.jpg.png" alt="Harley Fat Bob" />
+                </div>
+            </div>
         </div>
-
-        <nav class="navbar">
-            <a href="#">Sobre Mi</a>
-            <a href="#">Proyectos</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header>
-
-    <section class="home">
         <div class="home-content">
             <h1 class="Hola">Hola, Soy</h1>
             <h1 class="Nombre">Cristian Santana</h1>
@@ -30,15 +43,54 @@
                 <h1 rfl_text = "Multimedia" class="Multimedia">Multimedia</h1>
             </div>
         </div>
-        <div class="carrousel">
-            data-flickity-options='{ "wrapAround": true }'>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
-            <div class="gallery-cell"></div>
+
+    </section>
+    <section class="about-me" id="About-me">
+        <div class="marginabout" id="margin-about-me"></div>
+        <div class="sobreMi" id="titlesobremi">
+            <div class="contenidosobremi"> Sobre Mi</div>
+            <div class="contenidosobremi"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore asperiores qui nisi eum expedita ipsum corrupti quia! Tenetur blanditiis repellat corporis sequi facere, accusamus suscipit natus nobis aliquid ut fugit!</div>
+            <div class="contenidosobremi">
+                <img src="Portfolio files\Images\Imagenpropia.png" alt="ImagenPropia">
+            </div>
         </div>
     </section>
+    <section class="proyectos">
+        <div class="marginpro" id="margin-proyects"></div>
+        <h1 class="titleproyectos">Mis Proyectos</h1>
+        <div class="hovercards">
+            <a class="card" href="javascript:delay('Harley-Fat-Bob-Proyect.html')">
+                <img src="Portfolio files\CardImages\Render Harley fat bob V2.jpg" alt="Render Harley fat bob V2.jpg">
+                <div>Modelo 3D Motocicleta Harley Fat Bob</div>
+            </a>
+            <div class="card">
+                <img src="Portfolio files\CardImages\Haralik descriptor billete 100.png" alt="Haralik descriptor billete 100.png">
+                <div>Reconocimiento de billetes colombianos mediante cámara</div>
+            </div>
+            <div class="card">
+                <img src="Portfolio files\CardImages\Imagen portada Saac 3D.jpg" alt="Imagen portada Saac 3D.jpg">
+                <div>Aplicación SAAC para niños con síndrome TEA</div>
+            </div>
+            <div class="card">
+                <img src="Portfolio files\CardImages\Carro Renderizado 2.png" alt="Carro Renderizado 2.png">
+                <div>Modelo 3D Mustang Mach 1 (1969)</div>
+            </div>
+        </div>
+    </section>
+    
+    <header class="header">
+        <div class="logo">
+            <a href="#" ><img src="Portfolio files\Firma recort.png" alt="Logo"></img></a>
+        </div>
 
+        <nav class="navbar">
+            <a href="#margin-about-me">Sobre Mi</a>
+            <a href="#margin-proyects">Proyectos</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+    <script src="JSportfolio.js"></script>
+    <script src="Portfolio files\Flickity js\flickity.pkgd.min.js"></script>
 </body>
+
 </html>
