@@ -30,7 +30,7 @@
 body{
     display:block;
     min-height: 100vh;
-    height: 500vh;
+    height: auto;
     /* background: url("Portfolio files/Render Harley fat bob V2.jpg") no-repeat;
     background-size: cover;
     background-position: center;
@@ -39,19 +39,38 @@ body{
     /* background-color: #242424; */
 }
 
+.bodyQ{
+    transform: translateX(-100%);
+    transition: 0.5s;
+}
+
 /* Inicio portada */
+
 
 .portada{
     overflow: hidden;
     display: grid;
-    row-gap: 6%;
-    column-gap: 4vw;
     grid-template-columns: 100% 52vw;
-    grid-auto-rows: minmax(0, fit-content);
-    width: 100%;
+    grid-template-rows: auto auto;
+    column-gap: 10vw;
+    padding-top: 4%;
+    padding-left: 5%;
+    width: fit-content;
     height: fit-content;
-    padding-inline:7%;
-    padding-block: 5%;
+    transition: 1s;
+}
+
+.secondportada{
+
+    display: grid;
+    grid-template-columns: 22vw 58vw;
+    grid-template-rows: 100%;
+    column-gap: 4vw;
+    margin-left: 4vw;
+    padding-top: 2%;
+    padding-left: 5%;
+    width: fit-content;
+    height: fit-content;
     transition: 1s;
 }
 
@@ -68,17 +87,114 @@ body{
     color: white;
 }
 
+.secondconteportada{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-35%);
+    display: block;
+    margin-block: auto;
+    transition: 1s;
+    text-wrap: nowrap;
+    font-size: 2.5vw;
+    text-align: left;
+    font-weight: lighter;
+    font-family: "Product Sans";
+    color: white;
+}
+
+/* Enlaces externos */
+.secondconteportada:nth-child(3){
+    display: flex;
+    justify-content: center;
+    padding-top: 7%;
+    padding-bottom: 0;
+}
+
+.secondconteportada:nth-child(4){
+    display: grid;
+    width: 100%;
+    place-items: center;
+}
+
+.secondconteportada:nth-child(4) a{
+    font-size: 1.7rem;
+    color: var(--navcolor);
+}
+
+/* Volver */
+.secondconteportada:nth-child(5){
+    display: grid;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 7%;
+    margin-bottom: 7%;
+    transition-delay: 0;
+    width: fit-content;
+    margin-inline: auto;
+    text-decoration: none;
+}
+
+.secondconteportada:nth-child(5)::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: var(--navcolor);
+    border-radius: 25px;
+    transition: .3s;
+}
+
+.secondconteportada:nth-child(5):hover::before{
+    width: 100%;
+    left: 0;
+}
+
+.secondconteportada:nth-child(5):hover{
+    color: var(--navcolor);
+    transition: .7s;
+    text-shadow: 0 0 10px,
+                0 0 30px,
+                0 0 50px;
+}
+
+.secondconteportada h1{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 2.5vw;
+    transition-delay: 0.3s;
+    text-wrap: wrap;
+    padding-block: 2%;
+    padding-right: 5%;
+    transition: 1s;
+}
+
+.secondconteportada h2{
+    text-align: justify;
+    font-family: Product Sans-light;
+    font-weight: lighter;
+    align-items: center;
+    padding-right: 5%;
+    text-wrap: wrap;
+    font-size: 1.5vw;
+    transition-delay: 0s;
+}
+
+
 .conteportada:nth-child(1) {
     /* opacity: 0; */
     /* filter: blur(5px); */
     /* transform: translateY(-50%); */
     padding-top: 0vh;
+    height: fit-content;
     grid-row: 1;
     grid-column: 1;
 }
 
 .conteportada:nth-child(2){
-    padding-top: 0;
+    padding-top: 5vh;
+    padding-bottom: 5.5vh;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -88,7 +204,7 @@ body{
 }
 
 .conteportada:nth-child(2) img{
-    width: 40vh;
+    width: 22vw;
     transition: 0.7s;
 }
 
@@ -106,13 +222,14 @@ body{
     grid-row: 1 / span 2;
 }
 
+
 .conteportada:nth-child(3) h1{
     text-align: left;
     font-weight: lighter;
     font-size: 2.5vw;
     transition-delay: 0.3s;
     text-wrap: wrap;
-    padding-block: 2%;
+    padding-bottom: 2%;
     transition: 1s;
 }
 
@@ -127,6 +244,7 @@ body{
     transition-delay: 0s;
 }
 
+
 .portadaS{
     opacity: 1;
     filter: blur(0);
@@ -136,6 +254,7 @@ body{
 
 .portadaStimer{
     grid-template-columns: 32vw 52vw;
+    column-gap: 4vw;
 }
 
 .conteportadaStimer:nth-child(3){
@@ -143,10 +262,70 @@ body{
     margin-block: auto;
 }
 
-.conteportadaStimer:nth-child(3) h2{
-    text-wrap: wrap;
+.secondportadaS{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: 1s;
 }
 
+/* Volver */
+
+
+/* Carrousel de imagenes */
+
+/* external css: flickity.css */
+
+* { box-sizing: border-box; }
+
+body { font-family: Product Sans; }
 
 
 
+.carousel {
+    background: transparent;
+    display: block;
+    margin-block: auto;
+  }
+
+  .carousel-cell {
+    width: 80%;
+    height: 30vw;
+    margin-right: 10px;
+    background: var(--origiblu);
+    border-radius: 20px;
+    counter-increment: carousel-cell;
+    object-fit: cover;
+  }
+  
+    /* fullscreen */
+.carousel.is-fullscreen .carousel-cell {
+    height: 100%;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 30vw;
+    font-size: 80px;
+    color: white;
+  }
+
+  .flickity-page-dots {
+    margin-top: 10%;
+    bottom: -10px;
+  }
+  /* white circles */
+  .flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid var(--navcolor);
+  }
+  /* fill-in selected dot */
+  .flickity-page-dots .dot.is-selected {
+    background: var(--navcolor);
+  }
