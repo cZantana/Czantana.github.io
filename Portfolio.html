@@ -77,6 +77,32 @@
             </div>
         </div>
     </section>
+    <section class="contact-me">
+        <div class="margincont" id="margin-contact"></div>
+        <h1 class="titlecontacto">Contacto</h1>
+        <div class="contactcard">
+            <form id="formulario-contacto">
+                <div class="contecontacto" id="confirmacion">
+                    <label>¡Envíame un mensaje!</label>
+                </div>
+                <div class="contecontacto">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Maria" required>
+                </div>
+                <div class="contecontacto">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ej: TuCorreo@gmail.com" required>
+                </div>
+                <div class="contecontacto">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Ej: Hola! Me gusto mucho tu portafolio" required></textarea>
+                </div>
+                <div class="contecontacto" id="divbotonenviar">
+                    <button type='button' id="botonenviar" onclick="enviarCorreo()">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
     
     <header class="header">
         <div class="logo">
@@ -86,9 +112,10 @@
         <nav class="navbar">
             <a href="#margin-about-me">Sobre Mi</a>
             <a href="#margin-proyects">Proyectos</a>
-            <a href="#">Contacto</a>
+            <a href="#margin-contact">Contacto</a>
         </nav>
     </header>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="JSportfolio.js"></script>
     <script src="Portfolio files\Flickity js\flickity.pkgd.min.js"></script>
 </body>

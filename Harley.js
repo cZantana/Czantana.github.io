@@ -72,7 +72,7 @@ bodys[0].classList.remove("bodyQ");
 function delay (URL) {
   setTimeout(function() {bodys[0].classList.add("bodyQ")}, 100)
   setTimeout(function() { window.scrollTo(0, 0)}, 500)
-  setTimeout( function() { window.location.href = URL;}, 1000);
+  setTimeout( function() { window.history.back();}, 1000);
 
 }
 
