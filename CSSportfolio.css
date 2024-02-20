@@ -710,6 +710,9 @@ header{
 
 
 /* Contactame */
+.contact-me{
+    padding-bottom: 1vh;
+}
 
 .titlecontacto{
     opacity: 0;
@@ -861,6 +864,9 @@ header{
     .contactcard{
         width: 45%;
     }
+    .contact-me{
+        padding-bottom: 3vh;
+    }
 }
 @media (max-width: 900px){
     .contactcard{
@@ -868,6 +874,9 @@ header{
     }
     .titlecontacto{
         padding-top: 14vh;
+    }
+    .contact-me{
+        padding-bottom: 7vh;
     }
 }
 @media (max-width: 600px){
