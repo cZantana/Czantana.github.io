@@ -119,7 +119,7 @@ body{
 
 .secondconteportada:nth-child(4) a{
     font-size: 1.7rem;
-    font-family: Product Sans Light;
+    font-family: Product Sans-Light;
     color: var(--navcolor);
 }
 
@@ -163,7 +163,7 @@ body{
 
 .secondconteportada:nth-child(1){
     height: 100%;
-    padding-block: 20%;
+    padding-block: 1vw;
     margin-block: auto;
     padding-left: 5%;
     display: grid;
@@ -190,7 +190,7 @@ body{
     align-items: center;
     padding-inline: 5%;
     text-wrap: wrap;
-    font-size: 27.8px;
+    font-size: 25.8px;
     transition-delay: 0s;
     height: 100%;
 }

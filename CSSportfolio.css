@@ -465,14 +465,18 @@ header{
     padding-top: 10%;
     grid-column: 2;
     align-self: end;
+    padding-bottom: 2%;
 }
 .contenidosobremi:nth-child(2){
     grid-column: 2;
     font-family: Product Sans-light;
     text-wrap: wrap;
     text-align: justify;
-    font-size: 30px;
+    font-size: 25px;
     transition-delay: 0.3s;
+}
+.contenidosobremi:nth-child(2) p{
+    padding-bottom: 3%;
 }
 .contenidosobremi:nth-child(3){
     display: grid;

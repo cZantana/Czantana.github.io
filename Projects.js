@@ -71,8 +71,8 @@ bodys[0].classList.remove("bodyQ");
 function delay (URL) {
   setTimeout(function() {bodys[0].classList.add("bodyQ")}, 100)
   setTimeout(function() { window.scrollTo(0, 0)}, 500)
+  bodys[0].classList.remove("bodyQ")
   setTimeout( function() { window.location.href = URL;}, 1000);
-
 }
 
 const flktyviewport = document.getElementsByClassName("flickity-viewport")

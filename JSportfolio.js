@@ -91,7 +91,8 @@ function delay (URL) {
   navbar[0].classList.add("headerQ")
   setTimeout(function() {bodys[0].classList.add("bodyQ")}, 100)
   setTimeout(function() { window.scrollTo(0, 0)}, 500)
-  setTimeout( function() { window.location.href = URL;}, 800);
+  bodys[0].classList.remove("bodyQ")
+  setTimeout( function() { window.location.href = URL;}, 900);
 
 }
 
@@ -165,14 +166,14 @@ mensaje.addEventListener('input',function(){
     event.srcElement.style.borderColor = "var(--navcolor)"
   }
 })
-// Enviar correo electronico
+
     function mensajeEnviado() {
       mensajeconfirm.firstChild.nextSibling.innerText = "¡El mensaje ya fue enviado!"
       mensajeconfirm.firstChild.nextSibling.style.color = "hsl(0, 100%, 40%)"
     }
 
 
-    emailjs.init("sBDKCZ9t8OIkkTg8p"); // Reemplaza "tu_user_id" con tu User ID de EmailJS
+    emailjs.init("sBDKCZ9t8OIkkTg8p"); 
 
     function enviarCorreo() {
 
