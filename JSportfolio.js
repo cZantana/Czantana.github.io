@@ -91,8 +91,9 @@ function delay (URL) {
   navbar[0].classList.add("headerQ")
   setTimeout(function() {bodys[0].classList.add("bodyQ")}, 100)
   setTimeout(function() { window.scrollTo(0, 0)}, 500)
-  bodys[0].classList.remove("bodyQ")
-  setTimeout( function() { window.location.href = URL;}, 900);
+  setTimeout(function() {bodys[0].classList.remove("bodyQ")
+  navbar[0].classList.remove("headerQ")
+  window.location.href = URL;}, 1000)
 
 }
 
