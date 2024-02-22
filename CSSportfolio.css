@@ -44,7 +44,7 @@ body{
     background: -webkit-linear-gradient(-45deg,var(--blackfond) 0%,  var(--oscublu) 33% , var(--blackfond) 66%, var(--oscublu) 100%);
     /* background: -webkit-linear-gradient(-45deg,var(--oscublu) 0%,  var(--blackfond) 33% , var(--oscublu) 66%, var(--blackfond) 100%); */
     /* background-color: #242424; */
-    transition-delay: 0.5s;
+    transition-delay: 1s;
     transition: 0.5s;
 }
 
